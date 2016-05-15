@@ -66,7 +66,7 @@ install_python_version( )
     read install_python
     if [ $install_python = 'y' ]; then
       echo "Installing python2.7.."
-      if ! dnf install python; then
+      if ! zypper in python; then
         error "Error installing python2.7 Aborting.."
       fi
     else
@@ -84,7 +84,7 @@ install_open_vpn( )
     read install_openvpn
     if [ $install_openvpn = 'y' ]; then
       echo "Installing network-manager-openvpn.."
-      if ! dnf install NetworkManager-openvpn; then
+      if ! zypper in NetworkManager-openvpn; then
         error "Error installing network-manager-openvpn. Aborting.."
       fi
     else
